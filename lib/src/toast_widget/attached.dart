@@ -88,61 +88,61 @@ Offset positionToastBox(
   String direction;
   //判断主方向,index由小到大
   if (preferDirection.index <= PreferDirection.topRight.index) {
-    direction = canPlaceTop() ? "top" : "bottom";
+    direction = canPlaceTop() ? 'top' : 'bottom';
   } else if (preferDirection.index <= PreferDirection.bottomRight.index) {
-    direction = canPlaceBottom() ? "bottom" : "top";
+    direction = canPlaceBottom() ? 'bottom' : 'top';
   } else if (preferDirection.index <= PreferDirection.leftBottom.index) {
-    direction = canPlaceLeft() ? "left" : "right";
+    direction = canPlaceLeft() ? 'left' : 'right';
   } else {
-    direction = canPlaceRight() ? "right" : "left";
+    direction = canPlaceRight() ? 'right' : 'left';
   }
 
   //判断对齐方向
   if (preferDirection.index <= PreferDirection.bottomRight.index) {
-    switch (_getDirection(preferDirection).replaceAll("top", "").replaceAll("bottom", "")) {
-      case "Left":
+    switch (_getDirection(preferDirection).replaceAll('top', '').replaceAll('bottom', '')) {
+      case 'Left':
         direction += canPlaceRight(extraSpace: targetRect.width)
-            ? "Left"
+            ? 'Left'
             : canPlaceLeft(extraSpace: targetRect.width)
-                ? "Right"
-                : "Center";
+                ? 'Right'
+                : 'Center';
         break;
-      case "Center":
-        direction += "Center";
+      case 'Center':
+        direction += 'Center';
         break;
-      case "Right":
+      case 'Right':
         direction += canPlaceLeft(extraSpace: targetRect.width)
-            ? "Right"
+            ? 'Right'
             : canPlaceRight(extraSpace: targetRect.width)
-                ? "Left"
-                : "Center";
+                ? 'Left'
+                : 'Center';
         break;
     }
   } else {
-    switch (_getDirection(preferDirection).replaceAll("left", "").replaceAll("right", "")) {
-      case "Top":
+    switch (_getDirection(preferDirection).replaceAll('left', '').replaceAll('right', '')) {
+      case 'Top':
         direction += canPlaceBottom(extraSpace: targetRect.height)
-            ? "Top"
+            ? 'Top'
             : canPlaceTop(extraSpace: targetRect.height)
-                ? "Bottom"
-                : "Center";
+                ? 'Bottom'
+                : 'Center';
         break;
-      case "Center":
-        direction += "Center";
+      case 'Center':
+        direction += 'Center';
         break;
-      case "Bottom":
+      case 'Bottom':
         direction += canPlaceTop(extraSpace: targetRect.height)
-            ? "Bottom"
+            ? 'Bottom'
             : canPlaceBottom(extraSpace: targetRect.height)
-                ? "Top"
-                : "Center";
+                ? 'Top'
+                : 'Center';
         break;
     }
   }
 
   Offset resultOffset = Offset.zero;
   switch (direction) {
-    case "topLeft":
+    case 'topLeft':
       resultOffset = targetRect.topLeft -
           Offset(0, toastSize.height) +
           Offset(
@@ -150,7 +150,7 @@ Offset positionToastBox(
             -verticalOffset,
           );
       break;
-    case "topCenter":
+    case 'topCenter':
       bool rightOverflow = toastSize.width / 2 > containerRect.right - targetRect.topCenter.dx;
       bool leftOverflow = toastSize.width / 2 > targetRect.topCenter.dx - containerRect.left;
       if (rightOverflow && !leftOverflow) {
@@ -162,7 +162,7 @@ Offset positionToastBox(
       }
       resultOffset += Offset(0, -verticalOffset);
       break;
-    case "topRight":
+    case 'topRight':
       resultOffset = targetRect.topRight -
           Offset(toastSize.width, toastSize.height) +
           Offset(
@@ -170,10 +170,10 @@ Offset positionToastBox(
             -verticalOffset,
           );
       break;
-    case "bottomLeft":
+    case 'bottomLeft':
       resultOffset = targetRect.bottomLeft + Offset(horizontalOffset, verticalOffset);
       break;
-    case "bottomCenter":
+    case 'bottomCenter':
       bool rightOverflow = toastSize.width / 2 > containerRect.right - targetRect.topCenter.dx;
       bool leftOverflow = toastSize.width / 2 > targetRect.topCenter.dx - containerRect.left;
       if (rightOverflow && !leftOverflow) {
@@ -185,13 +185,13 @@ Offset positionToastBox(
       }
       resultOffset += Offset(0, verticalOffset);
       break;
-    case "bottomRight":
+    case 'bottomRight':
       resultOffset = targetRect.bottomRight - Offset(toastSize.width, 0) + Offset(-horizontalOffset, verticalOffset);
       break;
-    case "leftTop":
+    case 'leftTop':
       resultOffset = targetRect.topLeft - Offset(toastSize.width, 0) + Offset(-horizontalOffset, verticalOffset);
       break;
-    case "leftCenter":
+    case 'leftCenter':
       bool topOverflow = toastSize.height / 2 > targetRect.centerLeft.dy - containerRect.top;
       bool bottomOverflow = toastSize.height / 2 > containerRect.bottom - targetRect.centerLeft.dy;
       if (topOverflow && !bottomOverflow) {
@@ -209,13 +209,13 @@ Offset positionToastBox(
       }
       resultOffset += Offset(-horizontalOffset, 0);
       break;
-    case "leftBottom":
+    case 'leftBottom':
       resultOffset = targetRect.bottomLeft - Offset(toastSize.width, toastSize.height) + Offset(-horizontalOffset, -verticalOffset);
       break;
-    case "rightTop":
+    case 'rightTop':
       resultOffset = targetRect.topRight + Offset(horizontalOffset, verticalOffset);
       break;
-    case "rightCenter":
+    case 'rightCenter':
       bool topOverflow = toastSize.height / 2 > targetRect.centerLeft.dy - containerRect.top;
       bool bottomOverflow = toastSize.height / 2 > containerRect.bottom - targetRect.centerLeft.dy;
       if (topOverflow && !bottomOverflow) {
@@ -233,7 +233,7 @@ Offset positionToastBox(
       }
       resultOffset += Offset(horizontalOffset, 0);
       break;
-    case "rightBottom":
+    case 'rightBottom':
       resultOffset = targetRect.bottomRight - Offset(0, toastSize.height) + Offset(horizontalOffset, -verticalOffset);
       break;
   }
@@ -242,5 +242,5 @@ Offset positionToastBox(
 }
 
 String _getDirection(PreferDirection preferDirection) {
-  return preferDirection.toString().replaceFirst("PreferDirection.", "");
+  return preferDirection.toString().replaceFirst('PreferDirection.', '');
 }

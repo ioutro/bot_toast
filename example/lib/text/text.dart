@@ -29,7 +29,7 @@ class _TextSampleState extends State<TextSample> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("TextToast"),
+        title: const Text('TextToast'),
       ),
       body: Container(
         padding: const EdgeInsets.only(top: 10),
@@ -41,8 +41,8 @@ class _TextSampleState extends State<TextSample> {
                 onPressed: () {
                   BotToast.showText(
                       text: (++index).isOdd
-                          ? "Text one"
-                          : "Text two",
+                          ? 'Text one'
+                          : 'Text two',
                       duration: Duration(seconds: seconds),
                       onlyOne: onlyOne,
                       clickClose: clickClose,
@@ -61,10 +61,10 @@ class _TextSampleState extends State<TextSample> {
                       backgroundColor: Color(backgroundColor),
                       contentColor: Color(contentColor));
                 },
-                child: const Text("TextToast"),
+                child: const Text('TextToast'),
               ),
               ListTile(
-                title: Text("duration:   ${seconds}s"),
+                title: Text('duration:   ${seconds}s'),
                 trailing: CupertinoSlider(
                   min: 1,
                   max: 20,
@@ -77,7 +77,7 @@ class _TextSampleState extends State<TextSample> {
                 ),
               ),
               ListTile(
-                title: Text("animationDuration:   ${animationMilliseconds}ms"),
+                title: Text('animationDuration:   ${animationMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -92,7 +92,7 @@ class _TextSampleState extends State<TextSample> {
               ),
               ListTile(
                 title: Text(
-                    "animationReverseDuration:   ${animationReverseMilliseconds}ms"),
+                    'animationReverseDuration:   ${animationReverseMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -147,7 +147,7 @@ class _TextSampleState extends State<TextSample> {
                     onlyOne = value;
                   });
                 },
-                title: const Text("onlyOne: "),
+                title: const Text('onlyOne: '),
               ),
               SwitchListTile(
                 value: clickClose,
@@ -156,7 +156,7 @@ class _TextSampleState extends State<TextSample> {
                     clickClose = value;
                   });
                 },
-                title: const Text("clickClose: "),
+                title: const Text('clickClose: '),
               ),
               SwitchListTile(
                 value: crossPage,
@@ -165,10 +165,10 @@ class _TextSampleState extends State<TextSample> {
                     crossPage = value;
                   });
                 },
-                title: const Text("crossPage: "),
+                title: const Text('crossPage: '),
               ),
               ListTile(
-                title: Text("align:  Alignment(0, $align)"),
+                title: Text('align:  Alignment(0, $align)'),
                 trailing: CupertinoSlider(
                   min: -1,
                   max: 1,
@@ -181,7 +181,7 @@ class _TextSampleState extends State<TextSample> {
                 ),
               ),
               ListTile(
-                title: Text("borderRadius:  $borderRadius"),
+                title: Text('borderRadius:  $borderRadius'),
                 trailing: CupertinoSlider(
                   min: 1,
                   max: 20,
@@ -194,7 +194,7 @@ class _TextSampleState extends State<TextSample> {
                 ),
               ),
               ListTile(
-                title: Text("fontSize:  $fontSize"),
+                title: Text('fontSize:  $fontSize'),
                 trailing: CupertinoSlider(
                   min: 10,
                   max: 30,
@@ -210,7 +210,7 @@ class _TextSampleState extends State<TextSample> {
                 title: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const Text("fontColor:   "),
+                    const Text('fontColor:   '),
                     Container(
                       height: 20,
                       width: 20,
@@ -234,7 +234,7 @@ class _TextSampleState extends State<TextSample> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const Text(
-                      "background:",
+                      'background:',
                       overflow: TextOverflow.fade,
                     ),
                     Container(
@@ -259,7 +259,7 @@ class _TextSampleState extends State<TextSample> {
                 title: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const Text("contentColor:   "),
+                    const Text('contentColor:   '),
                     Container(
                       height: 20,
                       width: 20,

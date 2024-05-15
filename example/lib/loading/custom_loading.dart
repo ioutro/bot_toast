@@ -59,7 +59,7 @@ class __CustomLoadWidgetState extends State<_CustomLoadWidget>
                         }),
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Text("Tap loading toast"),
+                      child: Text('Tap loading toast'),
                     )
                   ],
                 ),
@@ -85,7 +85,7 @@ class __CustomLoadWidgetState extends State<_CustomLoadWidget>
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: Text(
-                "Loading",
+                'Loading',
               ),
             )
           ],
@@ -115,7 +115,7 @@ class _CustomLoadingState extends State<CustomLoading> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("CustomLoading"),
+        title: const Text('CustomLoading'),
       ),
       body: Container(
         padding: const EdgeInsets.only(top: 10),
@@ -143,10 +143,10 @@ class _CustomLoadingState extends State<CustomLoading> {
                         return _CustomLoadWidget(cancelFunc: cancelFunc);
                       });
                 },
-                child: const Text("CustomLoading"),
+                child: const Text('CustomLoading'),
               ),
               ListTile(
-                title: Text("duration:   ${seconds}s"),
+                title: Text('duration:   ${seconds}s'),
                 trailing: CupertinoSlider(
                   min: 1,
                   max: 20,
@@ -159,7 +159,7 @@ class _CustomLoadingState extends State<CustomLoading> {
                 ),
               ),
               ListTile(
-                title: Text("animationDuration:   ${animationMilliseconds}ms"),
+                title: Text('animationDuration:   ${animationMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -174,7 +174,7 @@ class _CustomLoadingState extends State<CustomLoading> {
               ),
               ListTile(
                 title: Text(
-                    "animationReverseDuration:   ${animationReverseMilliseconds}ms"),
+                    'animationReverseDuration:   ${animationReverseMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -230,7 +230,7 @@ class _CustomLoadingState extends State<CustomLoading> {
                     clickClose = value;
                   });
                 },
-                title: const Text("clickClose: "),
+                title: const Text('clickClose: '),
               ),
               SwitchListTile(
                 value: allowClick,
@@ -239,7 +239,7 @@ class _CustomLoadingState extends State<CustomLoading> {
                     allowClick = value;
                   });
                 },
-                title: const Text("allowClick: "),
+                title: const Text('allowClick: '),
               ),
               SwitchListTile(
                 value: ignoreContentClick,
@@ -248,7 +248,7 @@ class _CustomLoadingState extends State<CustomLoading> {
                     ignoreContentClick = value;
                   });
                 },
-                title: const Text("ignoreContentClick: "),
+                title: const Text('ignoreContentClick: '),
               ),
               SwitchListTile(
                 value: crossPage,
@@ -257,13 +257,13 @@ class _CustomLoadingState extends State<CustomLoading> {
                     crossPage = value;
                   });
                 },
-                title: const Text("crossPage: "),
+                title: const Text('crossPage: '),
               ),
               ListTile(
                 title: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const Expanded(child: Text("backgroundColor:")),
+                    const Expanded(child: Text('backgroundColor:')),
                     Container(
                       height: 20,
                       width: 20,

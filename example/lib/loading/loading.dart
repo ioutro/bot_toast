@@ -21,7 +21,7 @@ class _LoadingState extends State<Loading> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Loading"),
+        title: const Text('Loading'),
       ),
       body: Container(
         padding: const EdgeInsets.only(top: 10),
@@ -45,10 +45,10 @@ class _LoadingState extends State<Loading> {
                       ),
                       backgroundColor: Color(backgroundColor));
                 },
-                child: const Text("Loading"),
+                child: const Text('Loading'),
               ),
               ListTile(
-                title: Text("duration:   ${seconds}s"),
+                title: Text('duration:   ${seconds}s'),
                 trailing: CupertinoSlider(
                   min: 1,
                   max: 20,
@@ -61,7 +61,7 @@ class _LoadingState extends State<Loading> {
                 ),
               ),
               ListTile(
-                title: Text("animationDuration:   ${animationMilliseconds}ms"),
+                title: Text('animationDuration:   ${animationMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -76,7 +76,7 @@ class _LoadingState extends State<Loading> {
               ),
               ListTile(
                 title: Text(
-                    "animationReverseDuration:   ${animationReverseMilliseconds}ms"),
+                    'animationReverseDuration:   ${animationReverseMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -131,7 +131,7 @@ class _LoadingState extends State<Loading> {
                     clickClose = value;
                   });
                 },
-                title: const Text("clickClose: "),
+                title: const Text('clickClose: '),
               ),
               SwitchListTile(
                 value: allowClick,
@@ -140,7 +140,7 @@ class _LoadingState extends State<Loading> {
                     allowClick = value;
                   });
                 },
-                title: const Text("allowClick: "),
+                title: const Text('allowClick: '),
               ),
               SwitchListTile(
                 value: crossPage,
@@ -149,13 +149,13 @@ class _LoadingState extends State<Loading> {
                     crossPage = value;
                   });
                 },
-                title: const Text("crossPage: "),
+                title: const Text('crossPage: '),
               ),
               ListTile(
                 title: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const Expanded(child: Text("backgroundColor:")),
+                    const Expanded(child: Text('backgroundColor:')),
                     Container(
                       height: 20,
                       width: 20,

@@ -28,7 +28,7 @@ class _CustomWidgetState extends State<_CustomWidget> {
                     loveMe = !loveMe;
                     BotToast.showText(
                         onlyOne: true,
-                        text: loveMe ? "Yes, I love you.😘" : "No!!!!😫");
+                        text: loveMe ? 'Yes, I love you.😘' : 'No!!!!😫');
                   });
                 }),
           ),
@@ -61,7 +61,7 @@ class _CustomNotificationState extends State<CustomNotification> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("CustomNotification"),
+        title: const Text('CustomNotification'),
       ),
       body: Container(
         padding: const EdgeInsets.only(top: 20),
@@ -87,7 +87,7 @@ class _CustomNotificationState extends State<CustomNotification> {
                       onlyOne: onlyOne,
                       crossPage: crossPage);
                 },
-                child: const Text("CustomNotification"),
+                child: const Text('CustomNotification'),
               ),
               SwitchListTile(
                 value: enableSlideOff,
@@ -96,7 +96,7 @@ class _CustomNotificationState extends State<CustomNotification> {
                     enableSlideOff = value;
                   });
                 },
-                title: const Text("enableSlideOff: "),
+                title: const Text('enableSlideOff: '),
               ),
               SwitchListTile(
                 value: onlyOne,
@@ -105,7 +105,7 @@ class _CustomNotificationState extends State<CustomNotification> {
                     onlyOne = value;
                   });
                 },
-                title: const Text("onlyOne: "),
+                title: const Text('onlyOne: '),
               ),
               SwitchListTile(
                 value: crossPage,
@@ -114,7 +114,7 @@ class _CustomNotificationState extends State<CustomNotification> {
                     crossPage = value;
                   });
                 },
-                title: const Text("crossPage: "),
+                title: const Text('crossPage: '),
               ),
               const Center(
                 child: Text('BackButtonBehavior'),
@@ -160,7 +160,7 @@ class _CustomNotificationState extends State<CustomNotification> {
                 ],
               ),
               ListTile(
-                title: Text("duration:   ${seconds}s"),
+                title: Text('duration:   ${seconds}s'),
                 trailing: CupertinoSlider(
                   min: 1,
                   max: 20,
@@ -173,7 +173,7 @@ class _CustomNotificationState extends State<CustomNotification> {
                 ),
               ),
               ListTile(
-                title: Text("animationDuration:   ${animationMilliseconds}ms"),
+                title: Text('animationDuration:   ${animationMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -188,7 +188,7 @@ class _CustomNotificationState extends State<CustomNotification> {
               ),
               ListTile(
                 title: Text(
-                    "animationReverseDuration:   ${animationReverseMilliseconds}ms"),
+                    'animationReverseDuration:   ${animationReverseMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,

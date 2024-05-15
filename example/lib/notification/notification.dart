@@ -21,7 +21,7 @@ class _NotificationState extends State<Notification> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Notification"),
+        title: const Text('Notification'),
       ),
       body: Container(
         padding: const EdgeInsets.only(top: 20),
@@ -39,7 +39,7 @@ class _NotificationState extends State<Notification> {
                             onPressed: cancel,
                           )),
                       title: (_) => const Text('Notification title'),
-                      subtitle: (_) => const Text("Notification subtitle"),
+                      subtitle: (_) => const Text('Notification subtitle'),
                       trailing: (cancel) => IconButton(
                             icon: const Icon(Icons.cancel),
                             onPressed: cancel,
@@ -61,7 +61,7 @@ class _NotificationState extends State<Notification> {
                           Duration(milliseconds: animationReverseMilliseconds),
                       duration: Duration(seconds: seconds));
                 },
-                child: const Text("notification"),
+                child: const Text('notification'),
               ),
               SwitchListTile(
                 value: enableSlideOff,
@@ -70,7 +70,7 @@ class _NotificationState extends State<Notification> {
                     enableSlideOff = value;
                   });
                 },
-                title: const Text("enableSlideOff: "),
+                title: const Text('enableSlideOff: '),
               ),
               SwitchListTile(
                 value: onlyOne,
@@ -79,7 +79,7 @@ class _NotificationState extends State<Notification> {
                     onlyOne = value;
                   });
                 },
-                title: const Text("onlyOne: "),
+                title: const Text('onlyOne: '),
               ),
               SwitchListTile(
                 value: crossPage,
@@ -88,7 +88,7 @@ class _NotificationState extends State<Notification> {
                     crossPage = value;
                   });
                 },
-                title: const Text("crossPage: "),
+                title: const Text('crossPage: '),
               ),
               const Center(child: Text('BackButtonBehavior'),),
               Row(
@@ -126,7 +126,7 @@ class _NotificationState extends State<Notification> {
                 ],
               ),
               ListTile(
-                title: Text("duration:   ${seconds}s"),
+                title: Text('duration:   ${seconds}s'),
                 trailing: CupertinoSlider(
                   min: 1,
                   max: 20,
@@ -139,7 +139,7 @@ class _NotificationState extends State<Notification> {
                 ),
               ),
               ListTile(
-                title: Text("animationDuration:   ${animationMilliseconds}ms"),
+                title: Text('animationDuration:   ${animationMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -154,7 +154,7 @@ class _NotificationState extends State<Notification> {
               ),
               ListTile(
                 title: Text(
-                    "animationReverseDuration:   ${animationReverseMilliseconds}ms"),
+                    'animationReverseDuration:   ${animationReverseMilliseconds}ms'),
                 trailing: CupertinoSlider(
                   min: 100,
                   max: 1000,
@@ -168,7 +168,7 @@ class _NotificationState extends State<Notification> {
                 ),
               ),
               ListTile(
-                title: Text("contentPadding:   $contentPadding"),
+                title: Text('contentPadding:   $contentPadding'),
                 trailing: CupertinoSlider(
                   min: 1,
                   max: 30,
